@@ -38,3 +38,4 @@ label = tk.Label(app, text="Carrega em dois pontos para desenhar um retângulo."
 label.pack()
 
 app.mainloop()
+input("\n---------Prima enter para fechar o programa---------")
