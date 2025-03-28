@@ -14,3 +14,4 @@ def conta_palavras():
     print(f"\nA frase contém {len(palavras)} palavras.")   #funçã len() conta o número de elementos na frase
     
 conta_palavras()
+input("\n---------Prima enter para fechar o programa---------")
