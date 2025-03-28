@@ -43,3 +43,4 @@ def rosto():
     win.close()
     
 rosto()
+input("\n---------Prima enter para fechar o programa---------")
