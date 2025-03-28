@@ -11,7 +11,7 @@ def main():
     bola.setFill("blue")
     bola.draw(win)
     
-    dx, dy = 13,
+    dx, dy = 13, 20
     
     while True:
         bola.move(dx, dy)
