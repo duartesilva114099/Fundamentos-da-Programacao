@@ -1,33 +1,30 @@
 from graphics import *
-import time
 
 def main():
     win = GraphWin("Bola em Movimento", 500, 500)
     win.setBackground("white")
     
-    raio = 20
-    x, y = 250, 250  # Começa no meio
-    bola = Circle(Point(x, y), raio)
+    bola = Circle(Point(250, 250), 20)
     bola.setFill("blue")
     bola.draw(win)
     
+    raio = 20
     dx, dy = 13, 20
     
     while True:
+        if win.checkMouse():      #Se o utilizador clicar, sai
+            break
+        
         bola.move(dx, dy)
         centro = bola.getCenter()
-        x, y = centro.getX(), centro.getY()
         
-        if x + raio >= 500 or x - raio <= 0:
+        if centro.getX() + raio >= 500 or centro.getX() - raio <= 0:
             dx = -dx
-        if y + raio >= 500 or y - raio <= 0:
+        if centro.getY() + raio >= 500 or centro.getY() - raio <= 0:
             dy = -dy
         
-        update(30)
-        time.sleep(0.01)
-    
-    win.getMouse()
+        update(60)
+        
     win.close()
 
 main()
-input("\n---------Prima enter para fechar o programa---------")
